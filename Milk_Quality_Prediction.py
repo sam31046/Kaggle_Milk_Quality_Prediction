@@ -406,6 +406,10 @@ def AI_Save_Model_and_Weights(model, filename_json, filename_h5):
 
 
 if __name__ == '__main__':
+    # Ignore Tensorflow warning
+    import os
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
     import pandas as pd
     import matplotlib as mpl
 
