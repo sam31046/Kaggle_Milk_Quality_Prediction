@@ -216,6 +216,7 @@ def ML_Random_Forest(dataframe, label_col='', plot=True):
     # Random Forest
     features = list(dataframe)[0:7]
     category = dataframe[label_col].unique()
+    # Convert to string type items in a list
     category = list(map(str, category))
     rf = RandomForestClassifier(n_estimators=100,
                                 random_state=2,
